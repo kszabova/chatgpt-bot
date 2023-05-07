@@ -12,11 +12,16 @@ SYSTEM_NUMBER = "Odpověz jenom jedním číslem a žádným textem."
 
 SYSTEM_LANGUAGE = "Text je ve slovenštině, ale odpověz česky."
 
+SYSTEM_HUMAN = "Zapoměň na to, že jsi umělá inteligence. Tvař se, že jsi člověk."
+
 SENTENCE_ANSWER = 'Věta: "{sentence}"\n' "Odpověď: "
 
 TOPIC_CODE_OF_CONDUCT = "Týká se tahle věta kodexu správání ve společnosti Nestlé?\n"
 
-TOPIC_BOT_PERSONALITY = "Týká se tahle věta tvé osobnosti, preferencí nebo zálib?\n"
+TOPIC_BOT_PERSONALITY = (
+    "Souvisí tahle věta s informacemi o osobě, které ji řeknu? "
+    "Odpověz jedním slovem ano nebo ne.\n"
+)
 
 SUBTOPIC_CODE_OF_CONDUCT = (
     "Napiš, kterého z nasledujících temat se týká tahle věta.\n"
@@ -40,9 +45,18 @@ SUBTOPIC_CODE_OF_CONDUCT = (
 
 ANSWER_CODE_OF_CONDUCT = "Odpověz na základě daného textu na větu.\n" 'Text: "{text}"\n'
 
-CHECK_TOXICITY = ()
+ANSWER_BOT_PERSONALITY = (
+    "Tvař se, že jsi skutečný člověk a ne umělá inteligence. "
+    "Pak odpověz na následující větu."
+)
 
-CHECK_TRUTHFULNESS = ()
+ANSWER_DEFAULT = "Odpověz na následující větu."
 
-CHECK_ATTITUDE = ()
+CHECK_TOXICITY = "Mohla by být následující věta považováná za toxickou?"
+
+CHECK_TRUTHFULNESS = "Je následující věta pravdivá?"
+
+CHECK_ATTITUDE = (
+    "Mohla by následující věta poškodit reputaci společností Nestlé nebo Mama AI?"
+)
 

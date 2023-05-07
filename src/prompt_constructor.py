@@ -42,3 +42,49 @@ class PromptConstructor:
             {"role": "user", "content": SENTENCE_ANSWER.format(sentence=sentence)},
         ]
         return messages
+
+    @staticmethod
+    def get_bot_personality_answer_prompt(sentence: str) -> list:
+        messages = [
+            {"role": "system", "content": SYSTEM_INSTRUCT},
+            {"role": "system", "content": SYSTEM_HUMAN},
+            {"role": "user", "content": ANSWER_DEFAULT},
+            {"role": "user", "content": SENTENCE_ANSWER.format(sentence=sentence)},
+        ]
+        return messages
+
+    @staticmethod
+    def get_default_answer_prompt(sentence: str) -> list:
+        messages = [
+            {"role": "system", "content": SYSTEM_INSTRUCT},
+            {"role": "user", "content": ANSWER_DEFAULT},
+            {"role": "user", "content": SENTENCE_ANSWER.format(sentence=sentence)},
+        ]
+        return messages
+
+    @staticmethod
+    def get_check_toxicity_prompt(sentence: str) -> list:
+        messages = [
+            {"role": "system", "content": SYSTEM_ONE_WORD},
+            {"role": "user", "content": CHECK_TOXICITY},
+            {"role": "user", "content": SENTENCE_ANSWER.format(sentence=sentence)},
+        ]
+        return messages
+
+    @staticmethod
+    def get_check_truthfulness_prompt(sentence: str) -> list:
+        messages = [
+            {"role": "system", "content": SYSTEM_ONE_WORD},
+            {"role": "user", "content": CHECK_TRUTHFULNESS},
+            {"role": "user", "content": SENTENCE_ANSWER.format(sentence=sentence)},
+        ]
+        return messages
+
+    @staticmethod
+    def get_check_attitude_prompt(sentence: str) -> list:
+        messages = [
+            {"role": "system", "content": SYSTEM_ONE_WORD},
+            {"role": "user", "content": CHECK_ATTITUDE},
+            {"role": "user", "content": SENTENCE_ANSWER.format(sentence=sentence)},
+        ]
+        return messages

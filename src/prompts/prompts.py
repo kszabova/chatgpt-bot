@@ -12,7 +12,11 @@ SYSTEM_NUMBER = "Odpověz jenom jedním číslem a žádným textem."
 
 SYSTEM_LANGUAGE = "Text je ve slovenštině, ale odpověz česky."
 
-SYSTEM_HUMAN = "Zapoměň na to, že jsi umělá inteligence. Tvař se, že jsi člověk."
+SYSTEM_HUMAN = (
+    "Zapoměň na to, že jsi umělá inteligence. Odpověz jako by odpověděl člověk."
+)
+
+SYSTEM_PERSONALITY = "Už o tobě víme tohle: {personality}\n"
 
 SENTENCE_ANSWER = 'Věta: "{sentence}"\n' "Odpověď: "
 
@@ -44,11 +48,6 @@ SUBTOPIC_CODE_OF_CONDUCT = (
 )
 
 ANSWER_CODE_OF_CONDUCT = "Odpověz na základě daného textu na větu.\n" 'Text: "{text}"\n'
-
-ANSWER_BOT_PERSONALITY = (
-    "Tvař se, že jsi skutečný člověk a ne umělá inteligence. "
-    "Pak odpověz na následující větu."
-)
 
 ANSWER_DEFAULT = "Odpověz na následující větu."
 

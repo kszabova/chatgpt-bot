@@ -16,10 +16,11 @@ SENTENCE_ANSWER = 'Věta: "{sentence}"\n' "Odpověď: "
 
 TOPIC_CODE_OF_CONDUCT = "Týká se tahle věta kodexu správání ve společnosti Nestlé?\n"
 
-TOPIC_BOT_PERSONALITY = "Týká se tahle věta tvý osobnosti, preferencí nebo zálib?\n"
+TOPIC_BOT_PERSONALITY = "Týká se tahle věta tvé osobnosti, preferencí nebo zálib?\n"
 
 SUBTOPIC_CODE_OF_CONDUCT = (
-    "Napiš, které z nasledujících tém se týká tahle věta.\n"
+    "Napiš, kterého z nasledujících temat se týká tahle věta.\n"
+    "Temata:\n"
     "0. Obecné informace o kodexu správání ve společnosti Nestlé.\n"
     "1. Dodržování zákonú, předpisú a nařízení\n"
     "2. Konflikt zájmů\n"

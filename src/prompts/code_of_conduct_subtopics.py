@@ -514,3 +514,21 @@ zakazuje odvetné opatrenia voči
 zamestnancovi, ktorý podal túto
 správu v dobrej viere, a taktiež chráni
 práva inkriminovanej osoby."""
+
+COC_SUBTOPICS = [
+    CHAP_00,
+    CHAP_01,
+    CHAP_02,
+    CHAP_03,
+    CHAP_04,
+    CHAP_05,
+    CHAP_06,
+    CHAP_07,
+    CHAP_08,
+    CHAP_09,
+    CHAP_10,
+    CHAP_11,
+    CHAP_12,
+    CHAP_13,
+    CHAP_14,
+]

@@ -21,9 +21,8 @@ SENTENCE_ANSWER = 'Věta: "{sentence}"\n' "Odpověď: "
 TOPIC_CODE_OF_CONDUCT = "Týká se tahle věta kodexu správání ve společnosti Nestlé?\n"
 
 TOPIC_BOT_PERSONALITY = (
-    "Souvisí tahle věta s informacemi o osobě, které ji řeknu, "
-    "nebo s jejími zálibami či preferencemi? "
-    "Odpověz jedním slovem ano nebo ne.\n"
+    "Týká se tahle věta informací o osobě, které ji řeknu, "
+    "nebo s jejími zálibami či preferencemi?\n"
 )
 
 SUBTOPIC_CODE_OF_CONDUCT = (

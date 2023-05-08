@@ -34,10 +34,29 @@ def test_answer_coc_family():
     print("RESPONSE:\n", response)
 
 
+def test_answer_coc_function():
+    sentence = "Můžu zastávat funkci v představenstvu jiné firmy?"
+    messages = PromptConstructor.get_coc_answer_prompt(sentence, 3)
+    response = query_openai(messages)
+    print("PROMPT:\n", messages)
+    print("RESPONSE:\n", response)
+
+
+def test_answer_coc_noncompliance():
+    sentence = "Co se stane, když poruším některou ze zásad chování?"
+    messages = PromptConstructor.get_coc_answer_prompt(sentence, 13)
+    response = query_openai(messages)
+    print("PROMPT:\n", messages)
+    print("RESPONSE:\n", response)
+
+
 def run_tests_answering():
     test_answer_personality_color()
     test_answer_personality_food()
     test_answer_personality_fear()
+    test_answer_coc_family()
+    test_answer_coc_function()
+    test_answer_coc_noncompliance()
 
 
 if __name__ == "__main__":

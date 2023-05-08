@@ -1,12 +1,12 @@
-from prompt_processor import (
+from .prompt_processor import (
     PromptProcessor,
     BotPersonalityProcessor,
     CodeOfConductProcessor,
     DefaultPromptProcessor,
 )
-from utils import extract_yes_no_from_response
-from query_openai import query_openai
-from prompt_constructor import PromptConstructor
+from .utils import extract_yes_no_from_response
+from .query_openai import query_openai
+from .prompt_constructor import PromptConstructor
 
 
 class TopicDecider:

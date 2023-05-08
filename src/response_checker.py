@@ -1,7 +1,7 @@
-from query_openai import query_openai
-from prompt_constructor import PromptConstructor
+from .query_openai import query_openai
+from .prompt_constructor import PromptConstructor
 
-from utils import extract_yes_no_from_response
+from .utils import extract_yes_no_from_response
 
 
 class ResponseChecker:

@@ -1,13 +1,13 @@
-from response_checker import (
+from .response_checker import (
     ToxicityChecker,
     TruthfulnessChecker,
     CompanyAttitudeChecker,
 )
-from default_answerer import DefaultAnswerer
-from prompt_constructor import PromptConstructor
-from query_openai import query_openai
+from .default_answerer import DefaultAnswerer
+from .prompt_constructor import PromptConstructor
+from .query_openai import query_openai
 
-from utils import extract_number_from_response
+from .utils import extract_number_from_response
 
 
 class PromptProcessor:

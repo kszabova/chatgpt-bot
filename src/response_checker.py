@@ -16,21 +16,6 @@ class ResponseChecker:
         raise NotImplementedError
 
 
-class ToxicityChecker(ResponseChecker):
-    def __init__(self) -> None:
-        super().__init__()
-
-    def __call__(self, response: str) -> bool:
-        messages = PromptConstructor.get_check_toxicity_prompt(response)
-        response = query_openai(messages)
-        response = extract_yes_no_from_response(response)
-        # only return True if the system is positive that
-        # the response is not toxic
-        if response is not None and response == "ne":
-            return True
-        return False
-
-
 class TruthfulnessChecker(ResponseChecker):
     def __init__(self) -> None:
         super().__init__()

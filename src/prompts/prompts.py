@@ -49,8 +49,6 @@ ANSWER_CODE_OF_CONDUCT = "Odpověz na základě daného textu na větu.\n" 'Text
 
 ANSWER_DEFAULT = "Odpověz na následující větu."
 
-CHECK_TOXICITY = "Mohla by být následující věta považováná za toxickou?"
-
 CHECK_TRUTHFULNESS = "Je následující věta pravdivá?"
 
 CHECK_ATTITUDE = (

@@ -11,7 +11,7 @@ def test_answer_personality_color():
 
 
 def test_answer_personality_food():
-    sentence = "Jaká je tvoje oblíbené jídlo?"
+    sentence = "Co je tvoje oblíbené jídlo?"
     messages = PromptConstructor.get_bot_personality_answer_prompt(sentence)
     response = query_openai(messages)
     print("PROMPT:\n", messages)

@@ -1,5 +1,4 @@
 from .response_checker import (
-    ToxicityChecker,
     TruthfulnessChecker,
     CompanyAttitudeChecker,
 )
@@ -37,7 +36,7 @@ class PromptProcessor:
 class BotPersonalityProcessor(PromptProcessor):
     def __init__(self) -> None:
         super().__init__()
-        self.response_checkers = [ToxicityChecker, CompanyAttitudeChecker]
+        self.response_checkers = [CompanyAttitudeChecker]
 
     def __call__(self, prompt: str) -> str:
         return super().__call__(prompt)
@@ -57,7 +56,7 @@ class BotPersonalityProcessor(PromptProcessor):
 class CodeOfConductProcessor(PromptProcessor):
     def __init__(self) -> None:
         super().__init__()
-        self.response_checkers = [ToxicityChecker, CompanyAttitudeChecker]
+        self.response_checkers = [CompanyAttitudeChecker]
 
     def __call__(self, prompt: str) -> str:
         return super().__call__(prompt)
@@ -84,7 +83,6 @@ class DefaultPromptProcessor(PromptProcessor):
     def __init__(self) -> None:
         super().__init__()
         self.response_checkers = [
-            ToxicityChecker,
             TruthfulnessChecker,
             CompanyAttitudeChecker,
         ]

@@ -62,15 +62,6 @@ class PromptConstructor:
         return messages
 
     @staticmethod
-    def get_check_toxicity_prompt(sentence: str) -> list:
-        messages = [
-            {"role": "system", "content": SYSTEM_ONE_WORD},
-            {"role": "user", "content": CHECK_TOXICITY},
-            {"role": "user", "content": SENTENCE_ANSWER.format(sentence=sentence)},
-        ]
-        return messages
-
-    @staticmethod
     def get_check_truthfulness_prompt(sentence: str) -> list:
         messages = [
             {"role": "system", "content": SYSTEM_ONE_WORD},

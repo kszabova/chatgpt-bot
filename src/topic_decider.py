@@ -16,13 +16,13 @@ class TopicDecider:
         query_coc = PromptConstructor.get_is_code_of_conduct_prompt(prompt)
         response_coc = query_openai(query_coc)
         response_coc = extract_yes_no_from_response(response_coc)
-        if response_coc == "ano":
+        if response_coc is not None and response_coc == "ano":
             return CodeOfConductProcessor()
         # check if the query is about Bot Personality
         query_personality = PromptConstructor.get_is_bot_personality_prompt(prompt)
         response_personality = query_openai(query_personality)
         response_personality = extract_yes_no_from_response(response_personality)
-        if response_personality == "ano":
+        if response_personality is not None and response_personality == "ano":
             return BotPersonalityProcessor()
         # otherwise, return the default processor
         return DefaultPromptProcessor()

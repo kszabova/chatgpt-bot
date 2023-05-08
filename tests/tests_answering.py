@@ -50,6 +50,22 @@ def test_answer_coc_noncompliance():
     print("RESPONSE:\n", response)
 
 
+def test_answer_default_nestle():
+    sentence = "Čím se zabývá firma Nestlé?"
+    messages = PromptConstructor.get_default_answer_prompt(sentence)
+    response = query_openai(messages)
+    print("PROMPT:\n", messages)
+    print("RESPONSE:\n", response)
+
+
+def test_answer_default_championship():
+    sentence = "Kdo vyhrál v roce 2016 mistrovství ve fotbale?"
+    messages = PromptConstructor.get_default_answer_prompt(sentence)
+    response = query_openai(messages)
+    print("PROMPT:\n", messages)
+    print("RESPONSE:\n", response)
+
+
 def run_tests_answering():
     test_answer_personality_color()
     test_answer_personality_food()
@@ -57,6 +73,8 @@ def run_tests_answering():
     test_answer_coc_family()
     test_answer_coc_function()
     test_answer_coc_noncompliance()
+    test_answer_default_nestle()
+    test_answer_default_championship()
 
 
 if __name__ == "__main__":

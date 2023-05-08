@@ -3,10 +3,10 @@ from typing import Optional
 
 def extract_yes_no_from_response(response: str) -> Optional[str]:
     response = response.lower()
-    if response[:3] == "yes":
-        return "yes"
-    elif response[:2] == "no":
-        return "no"
+    if response[:3] == "ano":
+        return "ano"
+    elif response[:2] == "ne":
+        return "ne"
     return None
 
 

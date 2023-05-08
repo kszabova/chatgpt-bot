@@ -1,5 +1,5 @@
-from prompts.prompts import *
-from prompts.code_of_conduct_subtopics import *
+from .prompts.prompts import *
+from .prompts.code_of_conduct_subtopics import *
 
 
 class PromptConstructor:
@@ -48,7 +48,6 @@ class PromptConstructor:
         messages = [
             {"role": "system", "content": SYSTEM_INSTRUCT},
             {"role": "system", "content": SYSTEM_HUMAN},
-            {"role": "user", "content": ANSWER_DEFAULT},
             {"role": "user", "content": SENTENCE_ANSWER.format(sentence=sentence)},
         ]
         return messages

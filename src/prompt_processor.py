@@ -61,7 +61,7 @@ class CodeOfConductProcessor(PromptProcessor):
         return super().get_response(prompt)
 
 
-class DefaultPrompProcessor(PromptProcessor):
+class DefaultPromptProcessor(PromptProcessor):
     def __init__(self) -> None:
         super().__init__()
 

@@ -26,6 +26,14 @@ def test_answer_personality_fear():
     print("RESPONSE:\n", response)
 
 
+def test_answer_coc_family():
+    sentence = "Můžu říct svým rodičům, že Nestlé v příštím kvartálu očekává ztrátu?"
+    messages = PromptConstructor.get_coc_answer_prompt(sentence, 8)
+    response = query_openai(messages)
+    print("PROMPT:\n", messages)
+    print("RESPONSE:\n", response)
+
+
 def run_tests_answering():
     test_answer_personality_color()
     test_answer_personality_food()

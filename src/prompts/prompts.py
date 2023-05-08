@@ -27,23 +27,23 @@ TOPIC_BOT_PERSONALITY = (
 )
 
 SUBTOPIC_CODE_OF_CONDUCT = (
-    "Napiš, kterého z nasledujících temat se týká tahle věta.\n"
+    "Napiš, kterého z následujících temat se týká tahle věta.\n"
     "Temata:\n"
-    "0. Obecné informace o kodexu správání ve společnosti Nestlé.\n"
-    "1. Dodržování zákonú, předpisú a nařízení\n"
+    "0. Obecné informace o kodexu chování ve společnosti Nestlé.\n"
+    "1. Dodržování zákonů, předpisů a nařízení\n"
     "2. Konflikt zájmů\n"
     "3. Ředitelské funkce a aktivity mimo společnosti Nestlé\n"
     "4. Rodiny a rodinní příslušníci\n"
     "5. Příležitosti pro rozvoj podnikání\n"
     "6. Obchodování s akcemi mezi zasvěcenými osobami\n"
-    "7. Ochrana hospodárské soutěže a zásady čestného obchodování\n"
+    "7. Ochrana hospodářské soutěže a zásady čestného obchodování\n"
     "8. Důvěrné informace\n"
     "9. Podvodní konáni, ochrana aktiv společnosti a účetnictví\n"
     "10. Podplácení a korupce\n"
     "11. Dary, pohoštění, zábava\n"
     "12. Diskriminace a obtěžování\n"
-    "13. Nedodržování Kodexu obchodního správání\n"
-    "14. Hlásení nezákonního nebo neslučitelného správání\n"
+    "13. Nedodržování Kodexu obchodního chování\n"
+    "14. Hlášení nezákonného nebo neslučitelného chování\n"
 )
 
 ANSWER_CODE_OF_CONDUCT = "Odpověz na základě daného textu na větu.\n" 'Text: "{text}"\n'

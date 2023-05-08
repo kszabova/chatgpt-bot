@@ -3,6 +3,7 @@ from response_checker import (
     TruthfulnessChecker,
     CompanyAttitudeChecker,
 )
+from default_answerer import DefaultAnswerer
 from prompt_constructor import PromptConstructor
 from query_openai import query_openai
 
@@ -12,6 +13,7 @@ from utils import extract_number_from_response
 class PromptProcessor:
     def __init__(self) -> None:
         self.response_checkers = []
+        self.default_answerer = DefaultAnswerer()
 
     def __call__(self, prompt: str) -> str:
         return self.get_response(prompt)

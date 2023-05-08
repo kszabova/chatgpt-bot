@@ -1,6 +1,17 @@
+from response_checker import (
+    ToxicityChecker,
+    TruthfulnessChecker,
+    CompanyAttitudeChecker,
+)
+from prompt_constructor import PromptConstructor
+from query_openai import query_openai
+
+from utils import extract_number_from_response
+
+
 class PromptProcessor:
     def __init__(self) -> None:
-        pass
+        self.response_checkers = []
 
     def __call__(self, prompt: str) -> str:
         return self.get_response(prompt)
@@ -24,58 +35,68 @@ class PromptProcessor:
 class BotPersonalityProcessor(PromptProcessor):
     def __init__(self) -> None:
         super().__init__()
+        self.response_checkers = [ToxicityChecker, CompanyAttitudeChecker]
 
     def __call__(self, prompt: str) -> str:
         return super().__call__(prompt)
 
     def preprocess_prompt(self, prompt: str) -> str:
-        return super().preprocess_prompt(prompt)
+        return prompt
 
     def get_system_response(self, prompt: str) -> str:
-        return super().get_system_response(prompt)
+        messages = PromptConstructor.get_bot_personality_answer_prompt(prompt)
+        response = query_openai(messages)
+        return response
 
     def postprocess_response(self, response: str) -> str:
-        return super().postprocess_response(response)
-
-    def get_response(self, prompt: str) -> str:
-        return super().get_response(prompt)
+        return response
 
 
 class CodeOfConductProcessor(PromptProcessor):
     def __init__(self) -> None:
         super().__init__()
+        self.response_checkers = [ToxicityChecker, CompanyAttitudeChecker]
 
     def __call__(self, prompt: str) -> str:
         return super().__call__(prompt)
 
     def preprocess_prompt(self, prompt: str) -> str:
-        return super().preprocess_prompt(prompt)
+        return prompt
 
     def get_system_response(self, prompt: str) -> str:
-        return super().get_system_response(prompt)
+        messages_subtopic = PromptConstructor.get_coc_subtopic_prompt(prompt)
+        response_subtopic = query_openai(messages_subtopic)
+        subtopic = extract_number_from_response(response_subtopic)
+        # if we couldn't find subtopic number, return empty response
+        if subtopic is None:
+            return ""
+        messages = PromptConstructor.get_coc_answer_prompt(prompt, subtopic)
+        response = query_openai(messages)
+        return response
 
     def postprocess_response(self, response: str) -> str:
-        return super().postprocess_response(response)
-
-    def get_response(self, prompt: str) -> str:
-        return super().get_response(prompt)
+        return response
 
 
 class DefaultPromptProcessor(PromptProcessor):
     def __init__(self) -> None:
         super().__init__()
+        self.response_checkers = [
+            ToxicityChecker,
+            TruthfulnessChecker,
+            CompanyAttitudeChecker,
+        ]
 
     def __call__(self, prompt: str) -> str:
         return super().__call__(prompt)
 
     def preprocess_prompt(self, prompt: str) -> str:
-        return super().preprocess_prompt(prompt)
+        return prompt
 
     def get_system_response(self, prompt: str) -> str:
-        return super().get_system_response(prompt)
+        messages = PromptConstructor.get_default_answer_prompt(prompt)
+        response = query_openai(messages)
+        return response
 
     def postprocess_response(self, response: str) -> str:
-        return super().postprocess_response(response)
-
-    def get_response(self, prompt: str) -> str:
-        return super().get_response(prompt)
+        return response

@@ -10,7 +10,7 @@ It also requires the `openai` module to run.
 pip install openai
 ```
 
-The chatbot accesses OpenAI's API. The API key must be stored in the environment variable `OPENAI_API_KEY'.
+The chatbot accesses OpenAI's API. The API key must be stored in the environment variable `OPENAI_API_KEY`.
 
 The application is intended for command-line use. Download the entire repository to an arbitrary location.
 
